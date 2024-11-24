@@ -1,0 +1,257 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Öğeleri yukarı hizalar */
+    align-items: center;
+    height: 100vh;
+    background-color: #fafafa;
+    box-sizing: border-box; /* Kenarlık ve padding dahil */
+    overflow-x: hidden; /* Ekranın dışına taşmayı engeller */
+}
+
+/* Logo */
+.logo {
+    width: 250px;
+    margin-bottom: -20px; /* Burada boşluğu azalttık */
+}
+
+/* Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Buradaki boşluğu azalttık */
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Inputlar */
+.input-field {
+    width: 100%; /* Genişlik yüzde 100 */
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Kenarlık ve padding dahil */
+}
+
+/* Facebook ile devam et butonunun stili */
+.facebook-btn {
+    display: inline-flex; /* İçerik ile birlikte butonun boyutunu ayarlamak için */
+    align-items: center; /* İçeriği ortalamak için */
+    justify-content: center; /* İçeriği yatayda ortalamak için */
+    padding: 10px 85px; /* Yükseklik ve genişlik ayarı */
+    background-color: rgb(0, 149, 246); /* Facebook mavi rengi */
+    color: white; /* Beyaz yazı rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Köşe yuvarlama */
+    font-size: 16px; /* Yazı büyüklüğü */
+    text-decoration: none; /* Link altı çizgisi kaldır */
+    width: 100%; /* Butonun genişliğini tam yap */
+    box-sizing: border-box; /* Genişlik hesaplamasında padding de dahil olsun */
+}
+
+.facebook-btn img.icon {
+    margin-right: 10px; /* Facebook ikonunun sağında boşluk bırak */
+}
+
+.facebook-btn .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Ayırıcı */
+.divider {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Ekranın %90'ı kadar genişlik */
+    max-width: 400px; /* Maksimum genişlik */
+    color: rgb(142, 142, 142);
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+/* Şifreni mi Unuttun */
+.forgot-password {
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative; /* Mutlak konumlandırma yerine relative konumlandırma */
+    margin-top: -2px; /* Input ile arasına boşluk ekler */
+    text-align: right; /* Metni sağ hizalar */
+    width: 100%; /* Input alanıyla aynı genişlikte olmasını sağlamak */
+    display: block; /* Satır içi elementten blok elemente geçiş */
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Hata mesajı yazısı */
+.error-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Tekrar dene butonu */
+.retry-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.retry-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Giriş Yap Butonu */
+.login-btn {
+    width: 90%; /* Ekranın %90'ı kadar genişlik */
+    max-width: 400px; /* Maksimum genişlik */
+    padding: 10px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #007ac1;
+}
+
+/* Footer */
+.footer {background-color: rgb(250, 250, 250);
+    width: 100%;
+    text-align: center;
+    margin-top: 420px; /* Footer için üst boşluk */
+}
+
+.footer img {
+    background-color: #fafafa;
+    width: 100px; /* Resmin boyutunu küçültüyoruz */
+    display: block;
+    margin: 0 auto; /* Resmi ortalar */
+}
+
+.from-text {
+    font-size: 10px; /* Küçük harfler */
+    font-weight: normal;
+    text-transform: lowercase; /* Küçük harf ile yazılması */
+    margin-top: -5px; /* Resim ile yazı arasındaki boşluğu azaltıyoruz */
+    position: relative; /* Çizgi eklemek için position ayarı */
+}
+
+.from-text::before {
+    content: ''; /* Çizgi eklemek için içerik */
+    position: absolute;
+    top: -3px; /* Yazının hemen üstüne yerleştirilmesi */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Çizgi kalınlığı */
+    background-color: #dbdbdb; /* Renk burada ayarlanabilir */
+}
+
+/* Mobil Uyumluluk İçin Düzenlemeler */
+@media (max-width: 390px) {
+    /* Form ve butonlar için genişlik ayarı */
+    .input-field,
+    .login-btn,
+    .facebook-btn,
+    .forgot-password,
+    .divider {
+        width: 90%; /* Genişlik yüzde 90 olarak ayarlandı */
+        max-width: 400px; /* Maksimum genişlik */
+    }
+
+    /* Form içindeki öğeler arasındaki boşluk */
+    .login-form {
+        padding: 0 15px; /* Kenarlardan daha az boşluk */
+    }
+
+    /* Logo boyutunun küçülmesi */
+    .logo {
+        width: 200px; /* Telefon ekranında logo biraz küçülsün */
+    }
+
+    /* Şifreni mi Unuttun metni sağa hizalanır */
+    .forgot-password {
+        font-size: 12px; /* Yazı boyutunu koruyoruz */
+        right: 10px; /* Sağdan biraz boşluk bırakır */
+        margin-top: -3px; /* Input'un hemen altına hizalar */
+    }
+
+    /* Ayırıcı çizgi (divider) */
+    .divider {
+        width: 90%; /* Çizgi, inputlar gibi %90 genişliğinde olur */
+        max-width: 400px; /* Maksimum genişlik */
+    }
+
+    /* Facebook Butonu */
+    .facebook-btn {
+        width: 90%; /* Buton, inputlar ile aynı genişlikte olur */
+        max-width: 400px; /* Maksimum genişlik */
+    }
+    
+       /* Footer */
+       .footer {
+        width: 100%;
+        text-align: center;
+        margin-top: 420px /* Footer için üst boşluk */
+    }
+
+    .footer img {
+        width: 100px; /* Resmin boyutunu küçültüyoruz */
+        display: block;
+        margin: 0 auto; /* Resmi ortalar */
+    }
+
+    .from-text {
+        font-size: 10px; /* Küçük harfler */
+        font-weight: normal;
+        text-transform: lowercase; /* Küçük harf ile yazılması */
+        margin-top: -2px; /* Resim ile yazı arasındaki boşluğu azaltıyoruz */
+    }
+}
